@@ -9,7 +9,8 @@
  <ul>
   <% director.forEach((item) => { %>
   <li>
-    <%= item.name %>
+    <a href="/directors/<%= item.id %>"> <%= item.name %> </a>
+    <a href="/directors/<%= item.id %>/edit"> <span>&#x270e;</span></a>
   </li>
   <% }); %>
 </ul>

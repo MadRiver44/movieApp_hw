@@ -53,8 +53,7 @@ app.use('/auth', authRoutes);
 app.use('/user', userRoutes);
 app.use('/movies', movies);
 app.use('/directors', directors); // add the middleware -- when url= /directors, use the directors route as named in the variable directors
-app.use('/directors/:id', directors);
-app.use('/directors/:id/edit', directors);
+
 
 
 // catch 404 and forward to error handler
