@@ -14,6 +14,21 @@ router.get('/', function(req, res, next) {
   })
 });
 
+router.get('/new', function(req, res, next) {
+  res.render('newMovieForm', {
+    title: 'movies'
+  });
+});
+
+router.post('/', function(req, res, next) {
+  models.Movie.create({
+    title:req.body.title,
+    synopsis:req.body.synopsis
+  }).then(function() {
+    res.redirect('/movies')
+  });
+});
+
 router.get('/:id', function(req, res, next) {
   models.Movie.findById(req.params.id).then((movie) => {
         res.render('moviePage', {
@@ -42,6 +57,13 @@ router.put('/:id', function(req, res, next) {
   });
 });
 
+router.delete('/:id', function(req, res, next) {
+  models.Movie.destroy({
+    where: { id: req.params.id }
+  }).then((movie) => {
+    res.redirect('/movies');
+  })
+});
 
 
 // router.get('/', function(req, res, next) {
