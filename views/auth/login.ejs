@@ -1,0 +1,29 @@
+<% include ../partials/head.ejs %>
+  <body>
+    <% include ../partials/header.ejs %>
+    <main>
+      <div class="row">
+        <form class="col s12" action="/auth/login" method="post">
+        <div class="row">
+          <div class="row">
+        <div class="input-field col s12">
+          <input id="uname" type="text" class="validate" name="username">
+          <label for="name">Username:</label>
+        </div>
+      </div>
+          <div class="row">
+        <div class="input-field col s12">
+          <input id="password" type="password" name="password" class="validate">
+          <label for="password">Password</label>
+        </div>
+      </div>
+          <div>
+            <button class="btn waves-effect waves-light" type="submit" name="action">Log in</button>
+          </div>
+        </div>
+        </form>
+    </div>
+    </main>
+    <% include ../partials/footer.ejs %>
+  </body>
+</html>
