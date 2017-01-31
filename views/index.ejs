@@ -1,11 +1,14 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
+<% include partials/head.ejs %>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <% include partials/header.ejs %>
+    <main>
+      <div class="container">
+        <p>Hello, this is the main index page!</p>
+        <p><a href="/auth/register">click here to register</a></p>
+        <p><a href="/auth/login">click here to log in</a></p>
+        <p><a href="/auth/logout">click here to logout</a></p>
+      </div>
+    </main>
+    <% include partials/footer.ejs %>
   </body>
 </html>
