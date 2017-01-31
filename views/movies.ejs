@@ -9,7 +9,10 @@
     <p>Welcome to <%= title %></p>
     <ul>
         <% movies.forEach((movie) => { %>
-            <li><%=movie.title%></li>
+            <li>
+                <a href="/movies/<%= movie.id%>"><%=movie.title%></a>
+                <a href="/movies/<%= movie.id%>/edit"><span>&#x270e;</span></a>
+            </li>
         <% }) %>
 
     </ul>

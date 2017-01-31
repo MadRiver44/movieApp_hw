@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <form action="<%= '/movies/' + id + '?_method=PUT' %>" method="POST">
+        <label>
+            Movie Title:
+            <input type="text" name="title" value="<%= title %>">
+        </label>
+        <label>
+            Movie Synopsis:
+            <input type="text" name="synopsis" value="<%= sum %>">
+        </label>
+        <input type="submit" />
+
+    </form>
+  </body>
+</html>
