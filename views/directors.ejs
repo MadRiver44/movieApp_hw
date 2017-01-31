@@ -6,6 +6,14 @@
   <h1>Here is a list of Directors</h1>
 </head>
 <body>
+ <ul>
+  <% director.forEach((item) => { %>
+  <li>
+    <%= item.name %>
+  </li>
+  <% }); %>
+</ul>
+
 
 </body>
 </html>
