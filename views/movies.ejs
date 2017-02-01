@@ -12,6 +12,9 @@
             <li>
                 <a href="/movies/<%= movie.id%>"><%=movie.title%></a>
                 <a href="/movies/<%= movie.id%>/edit"><span>&#x270e;</span></a>
+                <form action="<%= '/movies/' + movie.id + '?_method=DELETE' %>" method="POST">
+                <input type="submit" value="X" />
+                </form>
             </li>
         <% }) %>
 
