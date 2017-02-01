@@ -13,7 +13,7 @@ const userRoutes = require('./routes/users.js');
 const app = express();
 require('dotenv').config();
 var methodOverride= require('method-override');
-// var index = require('./routes/index');
+
 var users = require('./routes/users');
 var movies = require('./routes/movies');
 var directors = require('./routes/directors'); // import directors route file and assign it to directors
