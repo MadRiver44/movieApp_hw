@@ -7,6 +7,5 @@ router.get('/', authHelpers.loginRequired, (req, res, next) => {
         user: req.user.dataValues
       });
     });
-  });
 
 module.exports = router;
